@@ -15,8 +15,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        detectingData()
+    }
+    
+    override func loadView() {
+//        detectingData()
         self.view = webView
         webView.navigationDelegate = self
         webView.uiDelegate = self
@@ -27,7 +29,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         
 //        loadRemoteUrl("https://www.apple.com")
 //        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        
+
 //        loadRemoteUrl("https://www.apple.com")
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
 ////            self.manageCookies()
@@ -35,7 +37,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 ////            self.showingAlertUI()
 //            self.snapshotPartOfThePage()
 //        }
-        
     }
     
     
